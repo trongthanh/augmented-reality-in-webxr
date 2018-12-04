@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Augmented Reality in WebXR - Tran Trong Thanh</title>
+	<meta name="description" content="">
+
+	<meta property="og:url"         content="https://int3ractive.com/ultimate-solution-to-web-layout/" />
+	<meta property="og:type"        content="article" />
+	<meta property="og:title"       content="Augmented Reality in WebXR - Tran Trong Thanh" />
+	<meta property="og:description" content= />
+	<meta property="og:image"       content="https://int3ractive.com/ultimate-solution-to-web-layout/cover.png" />
+
+	<!-- Base RevealJS styles -->
+	<link rel="stylesheet" href="css/reveal.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="css/prism-default.css">
+	<!-- VWS styles based on white theme -->
+	<link rel="stylesheet" href="css/theme/white.css">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		/*eslint-disable indent*/
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<header class="slides__header">
+			<img class="logo" src="img/logo-vws-color.png" height="40">
+			<div class="logo logo--link">
+				<a href="https://int3ractive.com" class="logo__link">in<span class="logo__link__box">t3</span>ractive.com</a>
+			</div>
+		</header>
+		<div class="slides">
+			<section>
+				<p>about me:</p>
+				<h3>Trần Trọng Thanh</h3>
+				<p>Co-founder &amp; CTO <a href="https://naustud.io">Nau Studio</a></p>
+				<p>Front End Specialist</p>
+				<p><small>Website: <a href="https://int3ractive.com">int3ractive.com</a></small><br>
+				<small>Github, Twitter, Facebook: <a href="https://about.me/trongthanh">@trongthanh</a></small></p>
+			</section>
+
+			<section>
+				<h2>Augmented Reality in </h2>
+				<h1>WebXR</h1>
+				<h3></h3>
+				<footer>
+					<p>12-2018</p>
+				</footer>
+			</section>
+			<section>
+				<section><h2>How did we get here?</h2></section>
+			</section>
+			<section data-background-video="videos/canvas2d-particle-animation.mp4" data-background-video-muted>
+				<h2>2005</h2>
+				<p>HTML5 and Canvas 2D</p>
+				<footer>
+					<figcaption class="text-white">Video: <a href="https://youtu.be/tcvI7VdtZ08">5 Best Javascript Canvas 2D Particle Animations</a></figcaption>
+				</footer>
+			</section>
+			<section data-background-image="img/steve-job-iphone.jpg">
+				<h2>2007</h2>
+				<p>first iPhone and<br>smartphone revolution</p>
+				<footer>
+					<figcaption class="text-white">Photo: Steve Job introduce iPhone in 2007</figcaption>
+				</footer>
+			</section>
+			<section data-background-image="img/threejs-library.png">
+				<h2>2010</h2>
+				<p>Three.js</p>
+				<footer>
+					<figcaption class="text-white">Image: THREE.js example page</figcaption>
+				</footer>
+			</section>
+			<section data-background-video="videos/webgl-canvas3d.mp4" data-background-video-muted>
+				<h2>2011</h2>
+				<p>WebGL and Canvas 3D</p>
+			</section>
+			<section data-background-video="videos/device-orientation-demo.mp4" data-background-video-muted>
+				<h2>2012</h2>
+				<p>DeviceOrientation Event and other device API</p>
+				<footer>
+					<figcaption class="text-white">Video: <a href="https://youtu.be/Ahmbn1KL-J4">device orientation demo</a></figcaption>
+				</footer>
+			</section>
+			<section data-background-image="img/google-cardboard.jpg">
+				<h2>2014</h2>
+				<p>Google cardboard and VR on the phone</p>
+			</section>
+			<section data-background-video="videos/what-is-webvr.mp4" data-background-video-muted>
+				<h2>2016</h2>
+				<p>WebVR API</p>
+				<footer>
+					<figcaption>Video src: <a href="https://webvr.rocks/">webvr.rocks</a></figcaption>
+				</footer>
+			</section>
+			<section data-background-video="videos/introducing-arcore.mp4" data-background-video-muted>
+				<h2>2017</h2>
+				<p>ARKit on iOS and ARCore on Android</p>
+				<p>Next generation augmented reality</p>
+			</section>
+			<section>
+				<h2>Can the Web do that?</h2>
+			</section>
+
+			<section data-background-video="videos/arjs-examples.mp4" data-background-video-muted>
+				<h2>AR.js</h2>
+			</section>
+
+			<section>
+				<p>How AR.js work?</p>
+				<figure>
+					<img src="img/arjs-layers.png" height="500" alt="AR.js layers">
+				</figure>
+				<p><small>Marker detection by emscripten ARtoolkit. 3D rendering by three.js</small></p>
+			</section>
+			<section>
+				<h3>AR.js is <strong>good</strong> but not <strong>ideal</strong>!</h3>
+				<ul>
+					<li>Require markers</li>
+					<li>Markers must be visible</li>
+					<li>Not making use of ARCore and ARKit</li>
+					<li>No hardware and chipset support</li>
+				</ul>
+			</section>
+			<section>
+				<h2>2018</h2>
+				<h1><strong>WebXR</strong></h1>
+			</section>
+
+			<section>
+				<h2>Mixed Reality</h2>
+				<figure>
+					<img src="img/immersive-spectrum.png" height="200" alt="Immersive spectrum">
+				</figure>
+				<ul>
+					<li>WebXR is the successor of WebVR API</li>
+					<li>WebXR cater for both AR & VR experience</li>
+					<li>Official name: <strong>WebXR Device API</strong></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Why is WebAR awesome?</h2>
+				<ul>
+					<li>No external viewer device</li>
+					<li>No app installation required</li>
+					<li>Just the Web and a smartphone</li>
+					<li>Progressive enhancement</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Getting started with WebAR<br>in WebXR Device API</h2>
+			</section>
+
+			<section data-background-image="img/android-oreo.jpg">
+				<h2>Prerequisites</h2>
+				<ul>
+					<li>Android Chrome Canary >=70</li>
+					<li>Android 8 Oreo</li>
+					<li>ARCore (from Google Play)</li>
+					<li>Supported devices*</li>
+					<li>Enable webxr-... flags in Chrome</li>
+				</ul>
+				<footer>
+					<small class="text-white">*(Nexus 5X+, Samsung S7+, Mi 8+...)</small>
+				</footer>
+			</section>
+
+			<section >
+				<p>Sample code: detect and init</p>
+				<pre data-line="4,6" data-line-height-ratio="1.24" class="language-js"><code>class App {
+  ...
+  async init() {
+    if (navigator.xr && XRSession.prototype.requestHitTest) {
+      try {
+        this.device = await navigator.xr.requestDevice();
+      } catch (e) {
+        this.onNoXRDevice();
+        return;
+      }
+    } else {
+      this.onNoXRDevice();
+      return;
+    }
+	...
+  }
+}</code></pre>
+			<footer>
+				<figcaption>Warning: API Draft, subject to change.</figcaption>
+			</footer>
+			</section>
+			<section >
+				<p>Sample code: start XRSession</p>
+				<pre data-line="5,7,9" data-line-height-ratio="1.24" class="language-js"><code>class App {
+  ...
+  async onEnterAR() {
+    const outputCanvas = document.createElement('canvas');
+    const ctx = outputCanvas.getContext('xrpresent');
+
+    const session = await this.device.requestSession({
+      outputContext: ctx,
+      environmentIntegration: true,
+    });
+    document.body.appendChild(outputCanvas);
+    this.onSessionStarted(session);
+  }
+}</code></pre>
+			<footer>
+				<figcaption>Warning: API Draft, subject to change.</figcaption>
+			</footer>
+			</section>
+
+			<section>
+				<p>Placing object in real world: WebXR Hit Test</p>
+				<figure>
+					<img src="img/device-hit-test.png" height="400" alt="WebXR hit test">
+				</figure>
+				<footer>
+					<small>Also known as: ray casting</small>
+				</footer>
+			</section>
+			<section>
+				<h2>DEMO</h2>
+			</section>
+
+			<section data-background-image="img/points-cloud.gif" data-background-video-muted>
+				<h3>Exciting upcoming features:</h3>
+				<ul>
+					<li>Measuring real world light</li>
+					<li>Understand surface and mesh</li>
+					<li>Depth information</li>
+					<li>Point clouds</li>
+				</ul>
+			</section>
+
+			<section >
+				<div class="two-column">
+					<div>
+						<h3>Applications?</h3>
+						<ul>
+							<li>Online shopping</li>
+							<li>Education</li>
+							<li>Entertainment</li>
+						</ul>
+					</div>
+					<figure style="height: 600px; overflow: hidden;">
+						<video style="object-fit: cover; object-position: left; width: 100%; height: 100%"
+							src="videos/webar-demo.mp4" data-autoplay loop></video>
+					</figure>
+				</div>
+			</section>
+			<section>
+				<blockquote>Always bet on <s>JavaScript</s> the Web</blockquote>
+				<footer>
+					<small>Brendan Eich</small>
+				</footer>
+			</section>
+
+			<section>
+				<h3>Questions?</h3>
+				<p>Link to these slides: <a href="http://tobeupdate">tobeupdate</a></p>
+			</section>
+			<section>
+				<h3>The End!</h3>
+				<p>Learn more:</p>
+				<ul class="text-smaller">
+					<li><a href="https://developers.google.com/web/updates/2018/06/ar-for-the-web">AR for the Web</a></li>
+				</ul>
+				<footer>
+					<p class="text-smaller">Github, Twitter, Facebook: <a href="https://about.me/trongthanh">@trongthanh</a></p>
+				</footer>
+			</section>
+
+
+
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+/*eslint-disable indent*/
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			transition: 'convex',
+			controls: true,
+			controlsTutorial: true,
+			history: true,
+			slideNumber: 'c/t',
+			width: 1280,
+			height: 720,
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/prism.js', async: true },
+			]
+		});
+
+		// print-pdf special treatment
+		if (window.location.search.match( /print-pdf/gi ) ) {
+			var header = document.querySelector('.slides__header');
+
+			Reveal.addEventListener('ready', function(event) {
+				console.log('Reveal ready');
+				// insert header into every slide for printing
+				var slides = document.querySelectorAll('.slide-background');
+				// console.log('slides:', slides.length);
+				Array.prototype.forEach.call(slides, (slide) => {
+					slide.prepend(header.cloneNode(true));
+				});
+
+				// hide global header
+				header.style.display = 'none';
+			});
+		}
+	</script>
+
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='https://www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		// ga('create','UA-4430452-4','auto');ga('send','pageview');
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "slides-webar-in-webxr",
+  "version": "1.0.0",
+  "description": "The slides for Augmented Reality in WebXR",
+  "homepage": "https://int3ractive.com",
+  "scripts": {
+    "start": "npx live-server ."
+  },
+  "author": {
+    "name": "Thanh Tran",
+    "email": "trongthanh@gmail.com",
+    "web": "https://int3ractive.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/trongthanh/webar-presentation.git"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=6.0.0"
+  },
+  "devDependencies": {
+  },
+  "license": "CC-BY-SA-4.0"
+}
