@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<title>Augmented Reality in WebXR - Tran Trong Thanh</title>
-	<meta name="description" content="">
+	<meta name="description" content="Slides for my presentation introducing WebAR over WebXR Device API">
 
-	<meta property="og:url"         content="https://int3ractive.com/ultimate-solution-to-web-layout/" />
+	<meta property="og:url"         content="https://int3ractive.com/augmented-reality-in-webxr" />
 	<meta property="og:type"        content="article" />
 	<meta property="og:title"       content="Augmented Reality in WebXR - Tran Trong Thanh" />
-	<meta property="og:description" content= />
-	<meta property="og:image"       content="https://int3ractive.com/ultimate-solution-to-web-layout/cover.png" />
+	<meta property="og:description" content="Slides for my presentation introducing WebAR over WebXR Device API" />
+	<meta property="og:image"       content="https://int3ractive.com/augmented-reality-in-webxr/cover.png" />
 
 	<!-- Base RevealJS styles -->
 	<link rel="stylesheet" href="css/reveal.css">
@@ -21,15 +21,15 @@
 	<link rel="stylesheet" href="css/theme/white.css">
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 
-	<!-- Printing and PDF exports -->
-	<script>
+	<!-- Printing and PDF exports. NOTE: untested, so uncommented -->
+	<!-- <script>
 		/*eslint-disable indent*/
 		var link = document.createElement( 'link' );
 		link.rel = 'stylesheet';
 		link.type = 'text/css';
 		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName( 'head' )[0].appendChild( link );
-	</script>
+	</script> -->
 </head>
 <body>
 	<div class="reveal">
@@ -45,10 +45,12 @@
 				<p>about me:</p>
 				<h3>Trần Trọng Thanh</h3>
 				<p>Front End & JavaScript Specialist</p>
-				<p><small>Co-founder &amp; CTO <a href="https://naustud.io">Nau Studio</a></small><br>
-				<small>Lecturer at <a href="https://NordicCoder.com">NordicCoder.com</a></small><br>
-				<small>Website: <a href="https://int3ractive.com">int3ractive.com</a></small><br>
-				<small>Github, Twitter, Facebook: <a href="https://about.me/trongthanh">@trongthanh</a></small></p>
+				<p>
+					<small>Co-founder &amp; CTO <a href="https://naustud.io">Nau Studio</a></small><br>
+					<small>Lecturer at <a href="https://NordicCoder.com">NordicCoder.com</a></small><br>
+					<small>Website: <a href="https://int3ractive.com">int3ractive.com</a></small><br>
+					<small>Github, Twitter, Facebook: <a href="https://about.me/trongthanh">@trongthanh</a></small>
+				</p>
 			</section>
 			<!-- 1 -->
 			<section>
@@ -285,6 +287,9 @@
 			<!-- 24 -->
 			<section data-background-video="videos/webar-hit-test-demo.mp4">
 				<h2>DEMO</h2>
+				<footer>
+					<figcaption>Video: <a href="https://youtu.be/GDhujHhUEKc">A simple augmented reality demo</a></figcaption>
+				</footer>
 			</section>
 
 			<!-- 25 -->
@@ -350,7 +355,8 @@
 			<!-- 29 -->
 			<section data-transition="fade">
 				<figure style="height: 700px;">
-					<img src="img/brendan-eich-always-bet-on-js.png" alt="Brendan Eich - always bet on JavaSCript">
+					<img src="img/brendan-eich-always-bet-on-js.png" alt="Brendan Eich - always bet on JavaScript">
+					<figcaption>Brendan Eich (JS creator) with topic LOLJS - JSConfEU 2011</figcaption>
 				</figure>
 			</section>
 			<!-- 30 -->
@@ -373,9 +379,6 @@
 					<p class="text-smaller">Github, Twitter, Facebook: <a href="https://about.me/trongthanh">@trongthanh</a></p>
 				</footer>
 			</section>
-
-
-
 		</div>
 	</div>
 
@@ -399,8 +402,8 @@
 			margin: 0.1,
 
 			dependencies: [
-				{ src: 'plugin/markdown/marked.js' },
-				{ src: 'plugin/markdown/markdown.js' },
+				// { src: 'plugin/markdown/marked.js' },
+				// { src: 'plugin/markdown/markdown.js' },
 				{ src: 'plugin/notes/notes.js', async: true },
 				{ src: 'plugin/prism.js', async: true },
 			]
