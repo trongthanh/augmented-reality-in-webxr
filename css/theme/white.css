@@ -599,6 +599,10 @@ body:not(.print-pdf) .hljs {
 	text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
+footer > * {
+	text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+}
+
 footer .text-white {
 	text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
